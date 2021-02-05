@@ -8,6 +8,7 @@ public class MemberVO {
 	String phone2 	= null;
 	String phone3 	= null;
 	String gender 	= null;
+	
 	public String getName() {
 		return name;
 	}

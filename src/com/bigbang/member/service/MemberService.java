@@ -15,7 +15,26 @@ public class MemberService {
 //		members = mDao.selectAll();
 //		mDao.selectByName();
 		return members;
+	}
+	public MemberVO selectByIdPw(String id, String pw) {
+		MemberVO member = new MemberDAO().selectByIdPw(id, pw);
 		
+		return member;
+	}
+	public void insertMember(MemberVO member) {
+		MemberDAO mDao = new MemberDAO();
+		mDao.insertMember(member);
+	}
+	public MemberVO selectById(String id) {
+		MemberVO member = null;
+		MemberDAO mDao = new MemberDAO();
+		member = mDao.selectById(id);
+		
+		return member;
+	}
+	public void updateMember(MemberVO mem) {
+		MemberDAO mDao = new MemberDAO();
+		mDao.updateMember(mem);
 	}
 	
 }
